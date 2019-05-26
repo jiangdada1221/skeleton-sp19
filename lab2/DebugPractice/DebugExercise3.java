@@ -12,7 +12,7 @@ public class DebugExercise3 {
             if (foodType.equals("turnip")) {
                 int newTotal = totalTurnips + numAvailable;
                 totalTurnips = newTotal;
-            }
+            }     //bug is in the file  :kroger turnip 0.45 -387128732
             in.readLine();
         }
         return totalTurnips;
