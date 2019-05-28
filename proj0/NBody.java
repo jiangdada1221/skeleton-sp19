@@ -68,7 +68,14 @@ public class NBody{
       StdDraw.pause(10);
       time += dt;
     }
-    // StdDraw.picture(0,4,"images/ball.gif");
 
+    /* print the result*/
+    StdOut.printf("%d\n", bodys.length);
+    StdOut.printf("%.2e\n", radius);
+    for(int i = 0;i < bodys.length;i++){
+      StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
+              bodys[i].xxPos,bodys[i].yyPos,bodys[i].xxVel,
+              bodys[i].yyVel,bodys[i].mass,bodys[i].imgFileName);
+    }
   }
 }
