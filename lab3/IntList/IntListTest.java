@@ -57,15 +57,34 @@ public class IntListTest {
         assertEquals(IntList.of(1, 2, 3, 4, 5, 6), A);
     }
 
-    @Test
-    public void testCatenate() {
-        IntList A = IntList.of(1, 2, 3);
-        IntList B = IntList.of(4, 5, 6);
-        IntList exp = IntList.of(1, 2, 3, 4, 5, 6);
-        assertEquals(exp, IntList.catenate(A, B));
-        assertEquals(IntList.of(1, 2, 3), A);
-    }
+//    @Test
+//    public void testCatenate() {
+//        IntList A = IntList.of(1, 2, 3);
+//        IntList B = IntList.of(4, 5, 6);
+//        IntList exp = IntList.of(1, 2, 3, 4, 5, 6);
+//        assertEquals(exp, IntList.catenate(A, B));
+//        assertEquals(IntList.of(1, 2, 3), A);
+//    }
 
+    @Test
+    public void testreverse(){
+        IntList a = IntList.of(1,2,3);
+        IntList b = IntList.reverse(a);
+        assertNotEquals(a,b);
+        assertEquals(b.first,3);
+        assertEquals(b.rest.first,2);
+        assertEquals(b.rest.rest.first,1);
+        IntList c = IntList.reverse(null);
+        assertEquals(c,null);
+    }
+    @Test
+    public void testwrap(){
+        IntList a = IntList.of(1,2,3);
+        IntList b = IntList.wrap(a);
+        assertEquals(3,b.first);
+        assertEquals(1,b.rest.first);
+        assertEquals(2,b.rest.rest.first);
+    }
     /** If you're running this from the command line, you'll need
       * to add a main method. See ArithmeticTest.java for an
       * example. */
