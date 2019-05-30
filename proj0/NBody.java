@@ -37,6 +37,7 @@ public class NBody{
     String filename = args[2];
     Body[] bodys = readBodies(filename);
     double radius = readRadius(filename);
+    StdAudio.play("audio/2001.mid");
     StdDraw.enableDoubleBuffering();
 
 
