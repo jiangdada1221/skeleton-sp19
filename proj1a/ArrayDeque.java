@@ -1,4 +1,4 @@
-import java.sql.SQLSyntaxErrorException;
+
 
 public class ArrayDeque<jyp> {
     private int prev;
@@ -35,6 +35,7 @@ public class ArrayDeque<jyp> {
        prev = capacity/2 -1;
        next = prev + capacity;
     }
+    /* add the given Item in front of (array)item */
    public void addFirst(jyp Item){
        if(prev == next){
            this.resizing(size+1);
@@ -133,24 +134,30 @@ public class ArrayDeque<jyp> {
         test.addLast(5);
         test.addLast(6);
         test.addLast(7);
+        /* test.item is [7,null,3,4,2,1,5,6]*/
+        /* the question is that: */
+        System.out.println(test.item[4]);  /* fail ClassCastException: object can not cast to Integer */
+        System.out.println(((Object[])(test.item))[4]); /* this one succeed */
+
+
 //        test.printDeque();
 //////        System.out.println(test.get(4));    // successfully print 5
-//////        System.out.println(test.item[4]); // this one fail  : class (object) can not be cast to integer     ?????????
+//        boolean result = test.item[4] instanceof Integer;  // this one fail  : class (object) can not be cast to integer     ?????????
 //        System.out.println((Object [])(test.item)[4]);  // success! the important thing is that if class conflicts, you should convert it to the top class
 //
 ////        test.resizing(test.size + 1);
 //        System.out.println(test.prev+" " + test.next);
-        for(int i = 0;i<=7;i++){
-            test.addLast(i+10);
-        }
-        test.printDeque();
-////        test.resizing(test.size + 1);
-//        int a = test.removeFirst();
-//        int b = test.removeLast();
-        ArrayDeque<Integer> new_arry = new ArrayDeque<>(test);
-        new_arry.printDeque();
-        new_arry.removeLast();
-        test.printDeque();
-        new_arry.printDeque();
+//        for(int i = 0;i<=7;i++){
+//            test.addLast(i+10);
+//        }
+//        test.printDeque();
+//////        test.resizing(test.size + 1);
+////        int a = test.removeFirst();
+////        int b = test.removeLast();
+//        ArrayDeque<Integer> new_arry = new ArrayDeque<>(test);
+//        new_arry.printDeque();
+//        new_arry.removeLast();
+//        test.printDeque();
+//        new_arry.printDeque();
     }
 }
