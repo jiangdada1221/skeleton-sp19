@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import java.util.Set;
+
 /** Tests by Brendan Hu, Spring 2015, revised for 2016 by Josh Hug */
 public class TestBSTMap {
 
@@ -77,6 +79,25 @@ public class TestBSTMap {
         assertTrue(b.containsKey("hi") && b.get("hi") != null);
     }
 
+    @Test
+    public void testKeyset() {
+        BSTMap<String, Integer> b = new BSTMap<String, Integer>();
+        for (int i = 0; i <= 5; i++) {
+            b.put("hi" + i, i);
+        }
+        Set<String> set = b.keySet();
+//        for (String i: set) {
+//            System.out.println(i);
+//        }
+        b.printInOrder();
+        b.remove("hi1");
+        b.remove("hi2");
+        b.printInOrder();
+        b.remove("hi5");
+        b.printInOrder();
+        b.remove("hijyp");
+        b.printInOrder();
+    }
     public static void main(String[] args) {
         jh61b.junit.TestRunner.runTests(TestBSTMap.class);
     }
