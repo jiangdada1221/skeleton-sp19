@@ -12,9 +12,13 @@ public class ComplexOomage implements Oomage {
     @Override
     public int hashCode() {
         int total = 0;
-        for (int x : params) {
-            total = total * 256;
-            total = total + x;
+//        for (int x : params) {
+//            total = total *256;
+//            total = total + x;
+//        }
+//        return total;
+        for (int i = 0;i <= params.size()-1;i++) {
+            total += i*i * params.get(i);
         }
         return total;
     }
@@ -86,5 +90,13 @@ public class ComplexOomage implements Oomage {
         randomComplexOomage().draw(0.75, 0.75, 1.5);
         randomComplexOomage().draw(0.25, 0.75, 1.5);
         randomComplexOomage().draw(0.75, 0.25, 1.5);
+        ComplexOomage test1 = randomComplexOomage();
+        ComplexOomage test2 = randomComplexOomage();
+        ComplexOomage test3 = randomComplexOomage();
+        ComplexOomage test4 = randomComplexOomage();
+        System.out.println(test1.hashCode());
+        System.out.println(test2.hashCode());
+        System.out.println(test3.hashCode());
+        System.out.println(test4.hashCode());
     }
 } 
