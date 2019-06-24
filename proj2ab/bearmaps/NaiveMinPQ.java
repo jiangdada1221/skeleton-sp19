@@ -111,4 +111,12 @@ public class NaiveMinPQ<T> implements ExtrinsicMinPQ<T> {
             return item.hashCode();
         }
     }
+
+    public static void main(String[] args) {
+        NaiveMinPQ<String> jyp = new NaiveMinPQ<>();
+        jyp.add("jyp",0.87);
+        jyp.add("xzy",0.88);
+        System.out.println(jyp.contains("jyp"));
+    }
+
 }
