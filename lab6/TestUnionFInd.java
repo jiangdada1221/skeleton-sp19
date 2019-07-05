@@ -16,5 +16,6 @@ public class TestUnionFInd {
         assertEquals(5,uf.sizeOf(3));
         uf.union(1,3);
         assertEquals(5,uf.sizeOf(3));
+        assertFalse(uf.connected(1,9));
     }
 }
