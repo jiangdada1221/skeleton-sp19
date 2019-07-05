@@ -1,6 +1,7 @@
 package bearmaps.hw4.wordladderpuzzle;
 
 
+import bearmaps.hw4.AStarSolver;
 import bearmaps.hw4.LazySolver;
 import bearmaps.hw4.ShortestPathsSolver;
 import bearmaps.hw4.SolutionPrinter;
@@ -12,14 +13,21 @@ import bearmaps.hw4.SolutionPrinter;
  * containing words10000.txt.
  * Created by hug.
  */
+
+/**
+ * To correct this,
+ * go to the “Edit Configurations” option under the Run menu of IntelliJ.
+ * Change the working directory to point to the folder that ends
+ * with bearmaps/hw4/input on your computer.
+ */
 public class DemoWordPuzzleSolution {
     public static void main(String[] args) {
-        String start = "horse";
-        String goal = "nurse";
+        String start = "intention";
+        String goal = "execution";
 
         WordGraph wg = new WordGraph();
 
-        ShortestPathsSolver<String> solver = new LazySolver<>(wg, start, goal, 10);
-        SolutionPrinter.summarizeSolution(solver, "->");
+        ShortestPathsSolver<String> solver = new AStarSolver<>(wg, start, goal, 10);
+        SolutionPrinter.summarizeSolution(solver, "<-");
     }
 }

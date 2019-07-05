@@ -61,7 +61,7 @@ public class BoardGraph implements AStarGraph<Board> {
                 }
             }
         }
-
+            // find the n in both b1 and b2 and then compute the distance
         return Math.abs(b1row - b2row) + Math.abs(b1col - b2col);
     }
 }

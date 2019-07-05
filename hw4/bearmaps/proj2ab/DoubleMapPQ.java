@@ -89,4 +89,14 @@ public class DoubleMapPQ<T> implements ExtrinsicMinPQ<T> {
     public int size() {
         return itemToPriority.size();
     }
+
+    public static void main(String[] args) {
+        DoubleMapPQ<String> test = new DoubleMapPQ<>();
+        double time1 = System.currentTimeMillis();
+        for (int i = 0;i<=200000;i++) {
+            test.add("hi"+i,(double) i);
+        }
+        double time2 = System.currentTimeMillis();
+        System.out.println("time: " +(time2-time1));
+    }
 }

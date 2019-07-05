@@ -23,4 +23,5 @@ public class WeightedEdge<Vertex> {
     public double weight() {
         return weight;
     }
+
 }

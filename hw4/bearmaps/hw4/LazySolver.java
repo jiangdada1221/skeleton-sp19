@@ -57,4 +57,6 @@ public class LazySolver<Vertex> implements ShortestPathsSolver<Vertex> {
     public double explorationTime() {
         return 0;
     }
+
+
 }
