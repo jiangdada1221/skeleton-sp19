@@ -163,9 +163,9 @@ public class KDTree implements PointSet {
     }
     private Tree BadChild(Point goal,Tree t) {
         if (t.L == GoodChild(goal,t))
-            return tree.R;
+            return t.R;
         else
-            return tree.L;
+            return t.L;
     }
     private boolean WorthToT(Point goal,double best,Tree t) {
         if (t.node.LF) {
