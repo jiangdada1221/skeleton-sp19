@@ -33,7 +33,8 @@ public class DemoInputSource {
             }
             if (c == 'Q') {
                 System.out.println("done.");
-                break;
+//                break;
+                System.exit(0);
             }
         }
 

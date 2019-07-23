@@ -83,7 +83,7 @@ public class TERenderer {
      * the screen in tiles.
      * @param world the 2D TETile[][] array to render
      */
-    public void renderFrame(TETile[][] world) {
+    public void renderFrame(TETile[][] world,boolean descrip,String s) {
         int numXTiles = world.length;
         int numYTiles = world[0].length;
         StdDraw.clear(new Color(0, 0, 0));
@@ -95,6 +95,10 @@ public class TERenderer {
                 }
                 world[x][y].draw(x + xOffset, y + yOffset);
             }
+        }
+        if (descrip) {
+            StdDraw.setPenColor(Color.WHITE);
+            StdDraw.text(7,32,s);
         }
         StdDraw.show();
     }

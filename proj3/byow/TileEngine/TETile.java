@@ -70,6 +70,14 @@ public class TETile {
         this(t.character, textColor, t.backgroundColor, t.description, t.filepath);
     }
 
+//    @Override
+//    public boolean equals(Object tile) {
+//        if (tile.getClass()!=this.getClass())
+//            return false;
+//        TETile te = (TETile) tile;
+//        return this.character==te.character && this.textColor.equals(te.textColor)&& this.backgroundColor.equals(te) &&
+//                this.description.equals(te.description)&& this.filepath.equals(te.filepath);
+//    }
 
     /**
      * Draws the tile to the screen at location x, y. If a valid filepath is provided,
